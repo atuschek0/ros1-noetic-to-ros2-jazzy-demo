@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="sensor_pkg" type="dht22_pub.py" name="dht22_publisher" output="screen">
+
+    <param name="publish_rate_hz" value="5.0"/>
+    <param name="frame_id"        value="dht22"/>
+    <param name="use_fakes"       value="true"/>
+    <param name="gpio_pin"        value="-1"/>
+  </node>
+</launch>

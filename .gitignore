@@ -1,0 +1,10 @@
+build/
+devel/
+install/
+log/
+cmake-build-*/
+.venv/
+.idea/
+.clion/
+__pycache__/
+*.pyc
