@@ -1,4 +1,4 @@
-# _dht.py  Note: this is literally identical in ROS1 to my ROS1 version
+# _dht.py  Note: this is literally identical in ROS2 to my ROS1 version
 import math
 
 TEMP_VARIANCE = 0.0

@@ -4,14 +4,14 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 def generate_launch_description(): # must stay snake_case for ROS
-    # Declare the CLI args (snake_case for ROS users)
+    #CLI args
     useFakes = LaunchConfiguration("use_fakes")
     frameId  = LaunchConfiguration("frame_id")
     rateHz   = LaunchConfiguration("publish_rate_hz")
     gpioPin  = LaunchConfiguration("gpio_pin")
 
     return LaunchDescription([
-        # Wire them with LaunchConfiguration (camelCase for our locals)
+        # Wiring
         DeclareLaunchArgument("use_fakes", default_value="true"),
         DeclareLaunchArgument("publish_rate_hz", default_value="5.0"),
         DeclareLaunchArgument("frame_id", default_value="dht22"),

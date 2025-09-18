@@ -81,7 +81,7 @@ class Dht22Publisher(Node):
         # publishing the message on both topics
         publishMesseges(self.tempPub, self.humPub, tempMsg, humMsg, logger=self.get_logger())
 
-# entry
+
 def main() -> None:
     rclpy.init()
     node = Dht22Publisher()

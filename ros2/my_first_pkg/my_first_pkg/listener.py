@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""
-Minimal String subscriber (Python) in the user's style:
-- PascalCase class
-- camelCase methods/locals
-- ALLCAPS constants
-(ROS APIs remain snake_case.)
-"""
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Temperature, RelativeHumidity
@@ -33,7 +27,7 @@ class PyListener(Node):
         )
 
     def onHum(self, msg: RelativeHumidity) -> None:
-        pct = msg.relative_humidity * 100.0  # RelativeHumidity is 0..1
+        pct = msg.relative_humidity * 100.0  # RelativeHumidity betwee 0 1
         self.get_logger().info(
             f"[HUM ] {pct:.1f} % (frame={msg.header.frame_id})"
         )
