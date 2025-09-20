@@ -7,10 +7,24 @@ A small, runnable demo showing the **same behavior** in both ROS1 (Noetic) and R
 
 By default, my publishers generate **synthesized** temperature/humidity data; a Raspberry Pi setup for a real DHT22 sensor is included.
 
+### Tested environment
+
+- OS: Kubuntu 24.04 (Wayland)
+- ROS 2: Jazzy (native on host; built with `colcon`)
+- ROS 1: Noetic (via Docker container) — Noetic targets Ubuntu 20.04, so this repo runs it in a container on 24.04.
+
+**Why did I use a container for ROS 1?**  
+Ubuntu 24.04 doesn’t support Noetic natively. MY ROS 1 workspace is launched inside a Docker image, while ROS 2 (Jazzy) runs directly on my host shell.
+
+
+
 ## Repo layout
 ```
 ./
+├── docker/
+│   └── ros1_entrypoint.sh*
 ├── docs/
+│   ├── MIGRATION_NOTES.md
 │   ├── ROS1_Launcher.webm
 │   ├── ROS1_LiveViewer.webm
 │   ├── ROS2_Launcher.webm
@@ -21,6 +35,7 @@ By default, my publishers generate **synthesized** temperature/humidity data; a 
 │   ├── ros1_live.gif
 │   ├── ros2_demo.gif
 │   └── ros2_live.gif
+├── README.md
 ├── ros1/
 │   └── sensor_pkg/
 │       ├── CMakeLists.txt
@@ -58,7 +73,7 @@ By default, my publishers generate **synthesized** temperature/humidity data; a 
         ├── setup.cfg
         └── setup.py
 
-18 directories, 30 files
+19 directories, 33 files
 
 ```
 
