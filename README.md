@@ -111,3 +111,9 @@ ros2 topic echo /dht22/humidity --once
 ## Raspberry Pi 
 
 My publishers support real DHT22 on a Pi. Please enable the `gpio_pin `parameter and install the sensor library (notes in `MIGRATION_NOTES.md`). Synthesized sensor data is set to the default to keep my demo portable.
+
+
+## Docs
+
+-  This README was authored in Markdown and edited with Ghostwriter on KDE.
+-  GIFs recorded from the Koocha screen capturing tool
